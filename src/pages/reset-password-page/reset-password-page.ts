@@ -3,6 +3,8 @@ import { NavController, LoadingController,
   AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../providers/auth-service';
+
+
 /*
   Generated class for the ResetPasswordPage page.
 
@@ -28,7 +30,7 @@ public resetPasswordForm;
       email: ['', Validators.compose([Validators.required])],
     })
   }
-  
+
  elementChanged(input){
     let field = input.inputControl.name;
     this[field + "Changed"] = true;

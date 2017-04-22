@@ -11,15 +11,32 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
- <h2>Welcome !</h2>
+ <h2>Welcome {{name}} !!</h2>
  <ion-buttons>
- Click here to feed in your information.
-      <button (click)="goToProfile()">
+ Click here to get your information.
+    <button (click)="goToProfile()">
         <ion-icon name="person"></ion-icon>
         </button>
     </ion-buttons>
-    <br><br>
     <h3>News Feed:</h3>
+    <marquee>Announcements</marquee>
     <br>
     <h3>Seed Bank Info:</h3>
+    <button ion-item (click)="goToKharifSeedBank()" text-wrap>
+   1. Seed Bank Details for Kharif season crops.
+    </button>
+    <button ion-item (click)="goToRabiSeedBank()" text-wrap>
+  2. Seed Bank Details for Rabi season crops.
+    </button>
+    <br>
+
+<ion-buttons>
+<!-- <ion-icon ios="ios-flower" md="md-flower"></ion-icon>
+ -->   
+  <button (click)="goToCropDetailsFill()" ion-button full color="danger">Add Crop Details</button>
+    <button  (click)="goToreqF()" ion-button full color="secondary">Request Fertilizers</button>
+    <button  (click)="goTosupplyF()" ion-button full color="secondary">Fertilizers Supply</button>
+    <button  (click)="goToCropAv()" ion-button full color="danger">Crops Available</button>
+     <button  (click)="goToCropAv()" ion-button full >Request for seeds</button>
+    </ion-buttons>
 </ion-content>

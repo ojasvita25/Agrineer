@@ -1,0 +1,84 @@
+<!--
+  Generated template for the Sell page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+     Sell ur produce
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logOut()">
+<ion-label> Hello farmer!</ion-label>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<h4>
+<b>Add Seed Sources:</b></h4>
+<ion-list>
+  <ion-item>
+    <ion-label color="primary">Crop:</ion-label>
+    <ion-input placeholder="crop"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label color="primary"> Quantity:</ion-label>
+    <ion-input placeholder="quantity in kgs"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label color="primary"> Price:</ion-label>
+    <ion-input placeholder="price"></ion-input>
+  </ion-item>
+</ion-list>
+<button ion-button color="danger">Apply for Sale</button>
+<hr>
+<ion-row>
+    <ion-col>
+      <strong>S.No</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Crop</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Quantity</strong>
+    </ion-col>
+    <ion-col> 
+    <strong>Price</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Status</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Track Process</strong>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <hr>
+  <ion-row>
+    <ion-col>
+      <strong>1.</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Wheat</strong>
+    </ion-col>
+    <ion-col>
+      <strong>200kgs</strong>
+    </ion-col>
+    <ion-col> 
+    <strong>Rs.xyz</strong>
+    </ion-col>
+    <ion-col>
+      <strong>yet to be approved</strong>
+    </ion-col>
+    <ion-col>
+     <button ion-button color="danger">Track</button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-content>

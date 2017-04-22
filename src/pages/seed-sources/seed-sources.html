@@ -1,0 +1,79 @@
+<!--
+  Generated template for the SeedSources page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+     Seed Sources
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logOut()">
+<ion-title> Hello abc!</ion-title>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<h4>
+<b>Add Seed Sources:</b></h4>
+<ion-list>
+  <ion-item>
+    <ion-label color="primary">Seed Name:</ion-label>
+    <ion-input placeholder="seed name"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label color="primary"> Vendor Details:</ion-label>
+    <ion-input placeholder="vendor details"></ion-input>
+  </ion-item>
+</ion-list>
+<button ion-button color="danger">ADD+</button>
+<hr>
+<ion-item>
+  <ion-label>Filter By Crops</ion-label>
+  <br>
+  <ion-select [(ngModel)]="toppings" multiple="true">
+    <ion-option>Rice</ion-option>
+    <ion-option>Wheat</ion-option>
+    <ion-option>barley</ion-option>
+    <ion-option>cotton</ion-option>
+    <ion-option>Oats</ion-option>
+    <ion-option>groundnuts</ion-option>
+  </ion-select>
+</ion-item>
+<ion-row>
+    <ion-col>
+      <strong>S.No</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Seed Name</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Details</strong>
+    </ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <ion-col>
+      <strong>1.</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Rice</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Vendor 1 Details</strong>
+    </ion-col>
+    <ion-col>
+     <button ion-button color="secondary">edit</button>
+    </ion-col>
+    <ion-col>
+     <button ion-button color="danger">delete</button>
+    </ion-col>
+  </ion-row>
+  <hr>
+</ion-content>

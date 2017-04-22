@@ -26,7 +26,7 @@
     <ion-item (click)="updateName()">
       <ion-grid>
         <ion-row>
-          <ion-col width-50>
+          <ion-col width-50 required>
             Name
           </ion-col>
           <ion-col *ngIf="userProfile?.firstName || userProfile?.lastName">
@@ -58,35 +58,63 @@
       </ion-grid>
     </ion-item>
     <ion-item>
-      <ion-label class="dob-label">Date of Birth</ion-label>
+      <ion-label>Date Of Birth</ion-label>
       <ion-datetime displayFormat="MMM D, YYYY" pickerFormat="D MMM YYYY"
         [(ngModel)]="birthDate" (ionChange)="updateDOB(birthDate)"></ion-datetime>
+    </ion-item>
+    <ion-item (click)="updateland()"> 
+ <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Total Land Holding:
+          </ion-col>
+          <ion-col *ngIf="userProfile?.LandHolding">
+            {{userProfile?.LandHolding}}
+          </ion-col>
+          <ion-col class="placeholder-profile" *ngIf="!userProfile?.LandHolding">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
     <ion-item>
 <ion-label>Cropping Calender</ion-label>
     </ion-item>
 <ion-item>
-
-	<ion-label>Karif Season :</ion-label>
-	<ion-select [(ngModel)]="cropCal1" multiple="true">
+	<ion-label>Kharif Season :</ion-label>
+	<ion-select [(ngModel)]="Kcrops" (ionChange)="updateKharif(Kcrops)" multiple="true">
     <ion-option>Rice</ion-option>
     <ion-option>maize</ion-option>
-    <ion-option>arhar</ion-option>
-     <ion-option>soyabean</ion-option>
-      <ion-option>groundnut</ion-option>
-     <ion-option>cotton</ion-option>
+    
   </ion-select>
   </ion-item>
   <ion-item>
   <ion-label>Rabi Season :</ion-label>
-	<ion-select [(ngModel)]="cropCal2" multiple="true">
+	<ion-select [(ngModel)]="Rcrops" (ionChange)="updateRabi(Rcrops)" multiple="true">
     <ion-option>Wheat</ion-option>
     <ion-option>barley</ion-option>
-    <ion-option>oats</ion-option>
-    <ion-option>linseed</ion-option>
-    <ion-option>mustard</ion-option>
+    
   </ion-select>
 </ion-item>
+ <ion-item (click)="updateBankDetails()"> 
+ <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Bank Details
+          </ion-col>
+           <ion-col *ngIf="userProfile?.BankName || userProfile?.BankNumber">
+            {{userProfile?.BankName }} {{userProfile?.BankNumber}}
+          </ion-col>
+          <ion-col class="placeholder-profile" *ngIf="!userProfile?.BankNumber">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
     <ion-item (click)="updateEmail()">
       <ion-grid>
         <ion-row>
@@ -104,6 +132,20 @@
         </ion-row>
       </ion-grid>
     </ion-item>
+<ion-item>
+ <ion-grid>
+        <ion-row>
+<ion-col width-50>
+            Create Group
+          </ion-col>
+<ion-col class="placeholder-profile">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+          </ion-row>
+          </ion-grid>
+</ion-item>
 
     <ion-item (click)="updatePassword()">
       <ion-grid>
